@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelTrek - Your gateway to unforgettable trekking adventures and tours.">
+    <meta name="keywords" content="Trekking, Tours, Travel, Adventure">
+    <title>TravelTrek - Explore Your Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="C:\Users\satya\Desktop\traveltrek\image\logo.jpg" alt="TravelTrek Logo" class="logo-image">
+        <span>TravelTrek</span>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Trekking</a>
+                    <ul>
+                        <li><a href="#">Dayara Bugyal Trek</a></li>
+                        <li><a href="#">Nag Tibba Trek</a></li>
+                        <li><a href="#">Kedarnath Trek</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Char Dham Yatra</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="contact-btn">Contact Now</button>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <img src="C:\Users\satya\Desktop\traveltrek\image\2nd.png"  alt=Trekking Image 3>
+        <img src= "C:\Users\satya\Desktop\traveltrek\image\1st.png" alt=Trekking Image 1>
+        <img src="C:\Users\satya\Desktop\traveltrek\image\2nd.png"  alt=Trekking Image 3>
+        <img src="C:\Users\satya\Desktop\traveltrek\image\3rd.jpg" alt=Trekking Image 4>
+        <img src="C:\Users\satya\Desktop\traveltrek\image\4th.jpg" alt=Trekking Image 5>
+    </section>
+
+  <!-- Upcoming Events Section -->
+  <section class="UpComing-Events" id="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-container">
+        <div class="event" onclick="openModal('Dayara Bugyal Trek')">
+            <img src="C:\Users\satya\Desktop\traveltrek\image\Dayara.webp" alt="Event 1">
+            <p>Dayara Bugyal Trek</p>
+            <button class="book-now-btn" onclick="event.stopPropagation(); openBookingPage()">Book Now</button>
+        </div>
+        <div class="event" onclick="openModal('Nag Tibba Trek')">
+            <img src="C:\Users\satya\Desktop\traveltrek\image\nag.webp" alt="Event 2">
+            <p>Nag Tibba Trek</p>
+            <button class="book-now-btn" onclick="event.stopPropagation(); openBookingPage()">Book Now</button>
+        </div>
+        <div class="event" onclick="openModal('Kedarnath Trek')">
+            <img src="C:\Users\satya\Desktop\traveltrek\image\kedarnath.webp" alt="Event 3">
+            <p>Kedarnath Trek</p>
+            <button class="book-now-btn" onclick="event.stopPropagation(); openBookingPage()">Book Now</button>
+        </div>
+        <div class="event" onclick="openModal('Har Ki Dun Trek')">
+            <img src="C:\Users\satya\Desktop\traveltrek\image\hari ki dun.jpeg" alt="Event 4">
+            <p>Har Ki Dun Trek</p>
+            <button class="book-now-btn" onclick="event.stopPropagation(); openBookingPage()">Book Now</button>
+        </div>
+        <div class="event" onclick="openModal('Char Dham Yatra')">
+            <img src="C:\Users\satya\Desktop\traveltrek\image\char.jpeg" alt="Event 5">
+            <p>Char Dham Yatra</p>
+            <button class="book-now-btn" onclick="event.stopPropagation(); openBookingPage()">Book Now</button>
+        </div>
+    </div>
+</section>
+
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title">Event Details</h3>
+            <p>More information about the event will be displayed here.</p>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="floating-btn" onclick="scrollToEvents()">View All UpComing Events</button>
+
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <div class="about-us">
+            <h3>About Us</h3>
+            <p>TravelTrek is dedicated to providing the best trekking and touring experiences. From breathtaking landscapes to cultural expeditions, we ensure every journey is unforgettable.Welcome to Traveltrek Adventurer – A Leading Trekking and Travel Organistion in India. We specialize in providing high-quality trekking and travel experiences that are suitable for all skill levels.</p>
+        </div>
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <p>Email: traveltrek0101@gmail.com</p>
+            <p>Mobile: +91 7236076486</p>
+            <p>Addresss: Ad Chowk, kamla arcade second floor. Gorakhpur Zip . 273001
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function openBookingPage() {
+            alert('Redirecting to booking page...');
+            // Add redirection code here to booking page
+        }
+
+        function openModal(eventTitle) {
+            document.getElementById('modal').style.display = 'flex';
+            document.getElementById('modal-title').textContent = eventTitle;
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function scrollToEvents() {
+            document.getElementById('events').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+ body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #140808;
+            color: #fff;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        header .logo img.logo-image {
+            width: 100px; /* Adjust size as needed */
+            height: 100px;
+            margin-right: 15px; /* Add space between the logo and text */
+        }
+        
+        header .logo span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        header nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        header nav ul li:hover ul {
+            position: absolute;
+            display: block;
+        }
+
+        header nav ul li ul li {
+            margin: 5px 0;
+        }
+
+        header .contact-btn {
+            background-color: #ff6347;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        header .contact-btn:hover {
+            background-color: #ff4500;
+        }
+
+        .home {
+            background: linear-gradient(#6c6464,#6ac2df);
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        
+        }
+
+        .home img {
+            position: absolute;
+            top: 0%;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: slide 16s infinite;
+        }
+
+        .home img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .home img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .home img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        .home img:nth-child(4) {
+            animation-delay: 12s;
+        }
+
+        .home img:nth-child(5) {
+            animation-delay: 16s;
+        }
+
+        @keyframes slide {
+            0% {
+                left: 0;
+                opacity: 0;
+                transform: scale(0.8);
+                background: linear-gradient(45deg, #ff6f61, #ffcc00);
+            }
+            20% {
+                left: 0;
+                opacity: 1;
+                transform: scale(1.1);
+                background: linear-gradient(45deg, #ff6f61, #ffcc00);
+            }
+            25% {
+                left: 100%;
+                opacity: 1;
+                transform: scale(1);
+                background: linear-gradient(45deg, #00bfff, #ff6f61);
+            }
+            100% {
+                left: 100%;
+                opacity: 0;
+                transform: scale(0.8);
+                background: linear-gradient(45deg, #00bfff, #ff6f61);
+            }
+        }
+        
+        .element {
+            position: absolute;
+            width: 100px; /* Example width */
+            height: 100px; /* Example height */
+            animation: slide 4s ease-in-out infinite;
+        }
+        
+        .UpComing-Events {
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            background-attachment: fixed;
+            padding: 4rem 2rem;
+        }
+
+          /* Event Card Styles */
+          .event-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+            gap: 3rem;
+        }
+
+        .event {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(227, 42, 42, 0.1);
+            cursor: pointer;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            background-size: 200% 200%;
+            animation: gradientShift 5s ease infinite;
+            transform-style: preserve-3d;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            padding-bottom: 2rem; /* Space for button */
+        }
+
+        .event:hover {
+            transform: scale(1.05) rotateY(10deg) rotateX(-5deg);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .event img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .event:hover img {
+            transform: scale(1.2) rotate(-1deg);
+        }
+
+        .event p {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background 0.4s ease;
+        }
+
+        .event:hover p {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Book Now Button */
+        .book-now-btn {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(74, 156, 239, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .book-now-btn:hover {
+            transform: scale(1.05);
+            background-color: #ff9e88;
+        }
+
+        /* Click Animation */
+        @keyframes clickEffect {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            50% {
+                transform: scale(1.15) rotate(2deg);
+                box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .event.animate {
+            animation: clickEffect 0.6s ease;
+        }
+
+        /* Modal Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(242, 241, 236, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2rem;
+            color: red;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Floating Action Button */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #72cddd, #659ecd);
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(40, 26, 26, 0.3);
+        }
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .contact > div {
+            flex: 1;
+            padding: 20px;
+            min-width: 300px;
+        }
+
+        .about-us {
+            text-align: left;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-info p, .about-us p {
+            margin: 10px 0;
+        }
+    
+
+
+
